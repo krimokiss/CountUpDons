@@ -1,0 +1,29 @@
+<body>
+    <div class="dons">
+        <div class="cb"> <h1>Dons en CB : &nbsp;</h1>
+            <span id="targetId1">{{ endVal1 }}  </span><span class="euros">&nbsp; €</span>
+        </div>
+        <div class="cb"> <h1>Dons en Especes : &nbsp;</h1>
+            <span id="targetId2">{{ endVal2 }} euros </span><span class="euros">&nbsp; €</span>
+        </div>
+    </div>
+   
+    <div class="cb total"> <h1 class="titre" >Total des Dons : &nbsp;</h1>
+        <span id="targetId3">{{ endVal3 }} euros </span>
+    </div>
+    
+    <div class="sadaqas">
+        <div>
+       
+            <input type="number" id="increment-value1" (keypress)="onInputKeypress1($event)">
+            <button id="increment-btn" (click)="increment1()">CB</button>
+          </div>
+          
+            <div>
+            
+             <input type="number" id="increment-value2" (keypress)="onInputKeypress2($event)">
+             <button id="increment-btn" (click)="increment2()">Espèces</button>
+           </div>
+    
+    </div>
+</body>
