@@ -1,16 +1,22 @@
 
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
-}
-body{
-    // background-image: url("https://static.vecteezy.com/ti/vecteur-libre/p1/5741719-modele-de-fond-islamique-avec-mihrab-podium-et-croissant-sur-fond-vert-emeraude-illustrationle-islamique-pour-les-vacances-musulmanes-vectoriel.jpg");
-    // background-size: cover;
-    background-color: rgb(4, 77, 4);
-    width: 100vw;
+
+// body{
+//     background-image: url("https://static.vecteezy.com/ti/vecteur-libre/p1/5741719-modele-de-fond-islamique-avec-mihrab-podium-et-croissant-sur-fond-vert-emeraude-illustrationle-islamique-pour-les-vacances-musulmanes-vectoriel.jpg");
+//     background-size: cover;
+//     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//     background-color: rgb(4, 77, 4);
+//     width: 100vw;
+//     height: 100vh;
+//     padding: 0%;
+//     margin: 0%;
+//   }
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
-    padding: 0%;
-    margin: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(4, 77, 4);
   }
 
 #targetId1, #targetId2, #targetId3 {
@@ -36,6 +42,7 @@ body{
   .cb{
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 2rem;
   }
   .dons{
@@ -44,6 +51,35 @@ body{
     color: #eff1f3;
     animation: reveal 3000ms ease-in-out forwards 200ms,
     glow 2500ms linear infinite 4000ms;
+  }
+
+
+  .addition{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+  
+  }
+  .euros{
+    font-size: 3rem;
+  }
+  .titre, #targetId3{
+
+    font-size: 8rem;
+    color: #007bff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+  }
+
+  #targetId3{
+    animation: glow 2500ms linear infinite 4000ms;
   }
   @keyframes reveal {
     80%{
@@ -58,35 +94,4 @@ body{
       text-shadow: 0 0 15px #fff;
     }
   }
-
-  .sadaqas{
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    bottom: 10px;
-    left: 40%;
-    gap: 50px;
   
-  }
-  .euros{
-    font-size: 3rem;
-  }
-  .titre, #targetId3{
-    font-size: 8rem;
-    color: #007bff;
-    text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px #0fa,
-    0 0 82px #0fa,
-    0 0 92px #0fa,
-    0 0 102px #0fa,
-    0 0 151px #0fa;
-  }
-  .total{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    margin-top: 5%;
-  }
