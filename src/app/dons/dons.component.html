@@ -1,14 +1,14 @@
 <div class="container">
   <div class="dons">
     <div class="cb">
-      <h1>Dons en CB : &nbsp;</h1>
-      <span id="targetId1">{{ endVal1 }} </span
-      ><span class="euros">&nbsp; €</span>
+      <h1 class="sous-titre">Dons en CB : &nbsp;</h1>
+      <span id="targetId1">{{ endVal1 }} </span><span>&nbsp;</span
+      ><span class="euros">€</span>
     </div>
-    <div class="cb">
-      <h1>Dons en Espèces : &nbsp;</h1>
-      <span id="targetId2">{{ endVal2 }} euros </span
-      ><span class="euros">&nbsp; €</span>
+    <div class="liquide">
+      <h1 class="sous-titre">Dons en Espèces : &nbsp;</h1>
+      <span id="targetId2">{{ endVal2 }}</span
+      ><span>&nbsp;</span><span class="euros">€</span>
     </div>
   </div>
 
@@ -17,23 +17,42 @@
     <span id="targetId3">{{ endVal3 }} euros </span>
   </div>
 
+  <p id="thanks">{{ show ? texte : null }}</p>
   <div class="addition">
-    <div>
+    <mat-form-field class="carte-bleue" appearance="outline">
       <input
+        matInput
         type="number"
+        min="0"
         id="increment-value1"
         (keypress)="onInputKeypress1($event)"
       />
-      <button id="increment-btn" (click)="increment1()">CB</button>
-    </div>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      id="increment-btn"
+      (click)="increment1()"
+    >
+      CB
+    </button>
 
-    <div>
+    <mat-form-field class="flous" appearance="outline">
       <input
+        matInput
         type="number"
+        min="0"
         id="increment-value2"
         (keypress)="onInputKeypress2($event)"
       />
-      <button id="increment-btn" (click)="increment2()">Espèces</button>
-    </div>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="warn"
+      id="increment-btn"
+      (click)="increment2()"
+    >
+      Espèces
+    </button>
   </div>
 </div>
