@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CountUp } from 'countup.js';
+import { CountUp } from 'countup.js'
 import confetti from 'canvas-confetti';
 
 @Component({
@@ -17,13 +17,17 @@ export class DonsComponent implements OnInit {
   duration = 8;
 
   ngOnInit(): void {
-    this.countUp1 = new CountUp('targetId1', 0, { duration: this.duration, separator: ''  });
-    if (!this.countUp1.error) {
-      this.countUp1.start();
-    } else {
-      console.error(this.countUp1.error);
-    }
-    this.countUp2 = new CountUp('targetId2', 0, { duration: this.duration, separator: ''  });
+    this.countUp1 = new CountUp('targetId1', 0, { duration: this.duration, onCompleteCallback: this.celebrate })
+
+
+
+    // this.countUp1 = new CountUp('targetId1', 0, { duration: this.duration, separator: '' },);
+    // if (!this.countUp1.error) {
+    //   this.countUp1.start();
+    // } else {
+    //   console.error(this.countUp1.error);
+    // }
+    this.countUp2 = new CountUp('targetId2', 0, { duration: this.duration, separator: '' });
     if (!this.countUp2.error) {
       this.countUp2.start();
     } else {
@@ -32,7 +36,7 @@ export class DonsComponent implements OnInit {
     this.countUp3 = new CountUp('targetId3', 0, { duration: this.duration, separator: '', suffix: ' euros' });
     if (!this.countUp3.error) {
       this.countUp3.start(() => {
-        this.celebrate();
+
       });
     } else {
       console.error(this.countUp3.error);
@@ -46,6 +50,7 @@ export class DonsComponent implements OnInit {
       this.countUp1.update(this.endVal1);
       this.countUp1.start();
       this.updateCountUp3();
+
     }
   }
 
@@ -75,6 +80,8 @@ export class DonsComponent implements OnInit {
     this.endVal3 = this.endVal1 + this.endVal2;
     this.countUp3.update(this.endVal3);
     this.countUp3.start();
+
+
   }
 
   celebrate() {
