@@ -1,15 +1,14 @@
 
 
-// body{
-//     background-image: url("https://static.vecteezy.com/ti/vecteur-libre/p1/5741719-modele-de-fond-islamique-avec-mihrab-podium-et-croissant-sur-fond-vert-emeraude-illustrationle-islamique-pour-les-vacances-musulmanes-vectoriel.jpg");
-//     background-size: cover;
-//     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-//     background-color: rgb(4, 77, 4);
-//     width: 100vw;
-//     height: 100vh;
-//     padding: 0%;
-//     margin: 0%;
-//   }
+body{
+    background-image: url("https://static.vecteezy.com/ti/vecteur-libre/p1/5741719-modele-de-fond-islamique-avec-mihrab-podium-et-croissant-sur-fond-vert-emeraude-illustrationle-islamique-pour-les-vacances-musulmanes-vectoriel.jpg");
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    padding: 0%;
+    margin: 0%;
+  }
   .container{
     display: flex;
     flex-direction: column;
@@ -49,8 +48,7 @@
     display: flex;
     justify-content: space-around;
     color: #eff1f3;
-    animation: reveal 3000ms ease-in-out forwards 200ms,
-    glow 2500ms linear infinite 4000ms;
+    animation: glow 2500ms linear infinite 4000ms;
   }
 
 
@@ -81,17 +79,12 @@
   #targetId3{
     animation: glow 2500ms linear infinite 4000ms;
   }
-  @keyframes reveal {
-    80%{
-      letter-spacing: 8px;
-    }
-    100% {
-      background-size: 300% 300%;
-    }
-  }
+
+
   @keyframes glow {
     40% {
       text-shadow: 0 0 15px #fff;
     }
   }
+  
   
