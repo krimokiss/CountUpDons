@@ -15,9 +15,12 @@ export class DonsComponent implements OnInit {
   endVal2 = 0;
   endVal3 = 0;
   duration = 8;
+  texte = 'Baraka Allahofikoum'
+  show: boolean = false;
 
   ngOnInit(): void {
-    this.countUp1 = new CountUp('targetId1', 0, { duration: this.duration, onCompleteCallback: this.celebrate })
+    this.countUp1 = new CountUp('targetId1', 0, { duration: this.duration, onCompleteCallback: this.celebrate });
+    this.countUp2 = new CountUp('targetId2', 0, { duration: this.duration, onCompleteCallback: this.celebrate });
 
 
 
@@ -27,12 +30,12 @@ export class DonsComponent implements OnInit {
     // } else {
     //   console.error(this.countUp1.error);
     // }
-    this.countUp2 = new CountUp('targetId2', 0, { duration: this.duration, separator: '' });
-    if (!this.countUp2.error) {
-      this.countUp2.start();
-    } else {
-      console.error(this.countUp2.error);
-    }
+    // this.countUp2 = new CountUp('targetId2', 0, { duration: this.duration, separator: '' });
+    // if (!this.countUp2.error) {
+    //   this.countUp2.start();
+    // } else {
+    //   console.error(this.countUp2.error);
+    // }
     this.countUp3 = new CountUp('targetId3', 0, { duration: this.duration, separator: '', suffix: ' euros' });
     if (!this.countUp3.error) {
       this.countUp3.start(() => {
@@ -50,6 +53,10 @@ export class DonsComponent implements OnInit {
       this.countUp1.update(this.endVal1);
       this.countUp1.start();
       this.updateCountUp3();
+      this.show = true
+      setTimeout(() => {
+        this.show = false
+      }, 7950);
 
     }
   }
@@ -61,6 +68,10 @@ export class DonsComponent implements OnInit {
       this.countUp2.update(this.endVal2);
       this.countUp2.start();
       this.updateCountUp3();
+      this.show = true
+      setTimeout(() => {
+        this.show = false
+      }, 7950);
     }
   }
 

@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { CountUp } from 'countup.js';
-
-
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 import { DonsComponent } from './dons/dons.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,13 @@ import { DonsComponent } from './dons/dons.component';
     DonsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
