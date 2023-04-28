@@ -15,12 +15,12 @@ export class DonsComponent implements OnInit {
   endVal2 = 0;
   endVal3 = 0;
   duration = 8;
-  texte = 'Baraka Allahofikoum'
+  texte = 'Baraka Allahofikoum بارك الله فيكم'
   show: boolean = false;
 
   ngOnInit(): void {
-    this.countUp1 = new CountUp('targetId1', 0, { duration: this.duration, onCompleteCallback: this.celebrate });
-    this.countUp2 = new CountUp('targetId2', 0, { duration: this.duration, onCompleteCallback: this.celebrate });
+    this.countUp1 = new CountUp('targetId1', 0, { duration: this.duration, onCompleteCallback: this.celebrate, suffix: ' €', smartEasingThreshold: 1000 });
+    this.countUp2 = new CountUp('targetId2', 0, { duration: this.duration, onCompleteCallback: this.celebrate, smartEasingThreshold: 1000, suffix: ' €' });
 
 
 
@@ -36,10 +36,12 @@ export class DonsComponent implements OnInit {
     // } else {
     //   console.error(this.countUp2.error);
     // }
-    this.countUp3 = new CountUp('targetId3', 0, { duration: this.duration, separator: '', suffix: ' euros' });
+    this.countUp3 = new CountUp('targetId3', 0, { duration: this.duration, separator: '', suffix: ' euros', smartEasingThreshold: 1000 });
     if (!this.countUp3.error) {
       this.countUp3.start(() => {
-
+        setTimeout(() => {
+          this.show = false
+        }, 1000);
       });
     } else {
       console.error(this.countUp3.error);
@@ -52,11 +54,11 @@ export class DonsComponent implements OnInit {
       this.endVal1 += value;
       this.countUp1.update(this.endVal1);
       this.countUp1.start();
-      this.updateCountUp3();
       this.show = true
-      setTimeout(() => {
-        this.show = false
-      }, 7950);
+      this.updateCountUp3();
+      // setTimeout(() => {
+      //   this.show = false
+      // }, 7950);
 
     }
   }
@@ -67,11 +69,9 @@ export class DonsComponent implements OnInit {
       this.endVal2 += value;
       this.countUp2.update(this.endVal2);
       this.countUp2.start();
-      this.updateCountUp3();
       this.show = true
-      setTimeout(() => {
-        this.show = false
-      }, 7950);
+      this.updateCountUp3();
+
     }
   }
 
@@ -91,7 +91,6 @@ export class DonsComponent implements OnInit {
     this.endVal3 = this.endVal1 + this.endVal2;
     this.countUp3.update(this.endVal3);
     this.countUp3.start();
-
 
   }
 
