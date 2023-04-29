@@ -15,8 +15,10 @@ export class DonsComponent implements OnInit {
   endVal2 = 0;
   endVal3 = 0;
   duration = 8;
-  texte = 'Baraka Allahofikoum بارك الله فيكم'
+  texte1 = 'Baraka Allahofikoum'
+  texte2 = 'بارك الله فيكم'
   show: boolean = false;
+  hidden: boolean = false
 
   ngOnInit(): void {
     this.countUp1 = new CountUp('targetId1', 0, { duration: this.duration, onCompleteCallback: this.celebrate, suffix: ' €', smartEasingThreshold: 1000 });
@@ -41,7 +43,10 @@ export class DonsComponent implements OnInit {
       this.countUp3.start(() => {
         setTimeout(() => {
           this.show = false
-        }, 1000);
+        }, 50);
+        setTimeout(() => {
+          this.hidden = false
+        }, 1100);
       });
     } else {
       console.error(this.countUp3.error);
@@ -55,10 +60,11 @@ export class DonsComponent implements OnInit {
       this.countUp1.update(this.endVal1);
       this.countUp1.start();
       this.show = true
+
       this.updateCountUp3();
-      // setTimeout(() => {
-      //   this.show = false
-      // }, 7950);
+      setTimeout(() => {
+        this.hidden = true
+      }, 1500);
 
     }
   }
@@ -70,6 +76,9 @@ export class DonsComponent implements OnInit {
       this.countUp2.update(this.endVal2);
       this.countUp2.start();
       this.show = true
+      setTimeout(() => {
+        this.hidden = true
+      }, 1500);
       this.updateCountUp3();
 
     }
