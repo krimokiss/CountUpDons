@@ -173,6 +173,7 @@
 // }
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=EB+Garamond:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500&display=swap");
 
 .container {
   display: flex;
@@ -192,6 +193,7 @@
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
+    padding: 0 10px;
   }
 
   input[type="number"]::-webkit-inner-spin-button,
@@ -201,23 +203,33 @@
   }
 
   .cb,
-  .liquide,
-  .total {
+  .liquide {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 0;
+    padding: 50px 0;
     text-align: center;
+
+    .sous-titre.part1 {
+      width: fit-content;
+    }
     .sous-titre {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
-
-      width: 50vw;
+      justify-content: space-around;
+      width: fit-content;
+      padding: 5px 15px;
       font-size: 3rem;
       text-align: center;
       animation: glow 2500ms linear infinite 4000ms;
     }
+  }
+  .total {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .dons {
@@ -242,26 +254,17 @@
 
   .titre,
   #targetId3 {
-    font-size: 4.5rem;
+    display: flex;
+    width: fit-content;
+    flex-wrap: nowrap;
+    text-shadow: 2px 1px 2px blue;
+    font-size: 5rem;
     color: #022346;
     filter: drop-shadow(5px 2px 4px rgb(47, 245, 179));
-    animation: reveal 3000ms ease forwards 200ms;
-
+    animation: reveal 3000ms ease forwards 200ms,
+      glow 2500ms linear infinite 4000ms;
     text-align: center;
     font-family: "EB Garamond", serif;
-  }
-  .titre {
-    display: flex;
-    width: 60%;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    text-shadow: 2px 1px 2px blue;
-  }
-
-  #targetId3 {
-    animation: glow 2500ms linear infinite 4000ms;
   }
 
   #increment-value1,
@@ -274,9 +277,15 @@
   #increment-btn {
     font-size: 15px;
     font-weight: bold;
+    background-color: #ffffff27;
+    backdrop-filter: blur(2px);
   }
 
   #thanks {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: "EB Garamond", serif;
     font-size: 3rem;
     text-transform: uppercase;
@@ -293,15 +302,20 @@
     font-size: 6rem;
     text-transform: uppercase;
     color: rgb(183, 159, 25);
+    // top: 70%;
+    // left: 50%;
+    transform: translateY(110%);
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
       0 0 42px rgb(255, 204, 0), 0 0 55px rgb(195, 255, 0),
       0 0 70px rgb(238, 255, 0), 0 0 11px rgb(157, 255, 0),
       0 0 50px rgb(187, 255, 0);
-    animation: glow 2500ms linear infinite 4000ms;
+    animation: glow 2500ms linear infinite 4000ms,
+      top-to-btm 5s ease-out infinite both; /* Définit l'animation de défilement */
     // background-color: purple;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
   }
 
   .scroll-text-container {
@@ -312,10 +326,11 @@
       justify-content: space-evenly;
       border-radius: 5px;
       text-align: center;
-      font-size: 1.5rem;
-      line-height: 2rem;
+      font-size: 2rem;
+      line-height: 2.5rem;
       font-family: "EB Garamond", serif;
-      background-color: #ffffff71;
+      background-color: #ffffff27;
+      backdrop-filter: blur(2px);
       animation: scroll 60s linear infinite; /* Définit l'animation de défilement */
       .hadith1 {
         border-right: 3px solid red;
@@ -333,8 +348,9 @@
       text-align: center;
       font-size: 2.5rem;
       line-height: 3rem;
-      font-family: "EB Garamond", serif;
-      background-color: #ffffff71;
+      font-family: "Noto Kufi Arabic", sans-serif;
+      background-color: #ffffff27;
+      backdrop-filter: blur(2px);
       animation: scroll-back 60s linear infinite; /* Définit l'animation de défilement */
       .hadith2 {
         margin: 0;
@@ -357,6 +373,14 @@
     } /* Commence le défilement à gauche de la zone de texte */
     100% {
       transform: translateX(130%);
+    } /* Déplace le texte hors de la zone de texte vers la gauche */
+  }
+  @keyframes top-to-btm {
+    0% {
+      transform: translateY(100%);
+    } /* Commence le défilement à gauche de la zone de texte */
+    100% {
+      transform: translateY(-100%);
     } /* Déplace le texte hors de la zone de texte vers la gauche */
   }
 
