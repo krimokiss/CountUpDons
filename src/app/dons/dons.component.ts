@@ -24,33 +24,38 @@ export class DonsComponent implements OnInit {
     this.countUp1 = new CountUp('targetId1', 0, { duration: this.duration, onCompleteCallback: this.celebrate, suffix: ' €', smartEasingThreshold: 1000 });
     this.countUp2 = new CountUp('targetId2', 0, { duration: this.duration, onCompleteCallback: this.celebrate, smartEasingThreshold: 1000, suffix: ' €' });
 
-
-
-    // this.countUp1 = new CountUp('targetId1', 0, { duration: this.duration, separator: '' },);
-    // if (!this.countUp1.error) {
-    //   this.countUp1.start();
-    // } else {
-    //   console.error(this.countUp1.error);
-    // }
-    // this.countUp2 = new CountUp('targetId2', 0, { duration: this.duration, separator: '' });
-    // if (!this.countUp2.error) {
-    //   this.countUp2.start();
-    // } else {
-    //   console.error(this.countUp2.error);
-    // }
-    this.countUp3 = new CountUp('targetId3', 0, { duration: this.duration, separator: '', suffix: ' euros', smartEasingThreshold: 1000 });
-    if (!this.countUp3.error) {
-      this.countUp3.start(() => {
+    this.countUp3 = new CountUp('targetId3', 0, {
+      duration: this.duration,
+      separator: '',
+      suffix: ' euros',
+      smartEasingThreshold: 1000,
+      onCompleteCallback: function () {
+        const texte1 = ((<HTMLElement>document.getElementById('thanks')))
+        texte1.innerHTML = 'Baraka Allahofikoum';
         setTimeout(() => {
-          this.show = false
-        }, 50);
+          texte1.innerHTML = ''
+
+        }, 3000);
+        const texte2 = ((<HTMLElement>document.getElementById('thanks2')))
+        texte2.innerHTML = 'بارك الله فيكم';
         setTimeout(() => {
-          this.hidden = false
-        }, 1100);
-      });
-    } else {
-      console.error(this.countUp3.error);
-    }
+          texte2.innerHTML = ''
+
+        }, 4000);
+      }
+    });
+    // this.countUp3 = new CountUp('targetId3', 0, { duration: this.duration, separator: '', suffix: ' euros', smartEasingThreshold: 1000 });
+
+    // if (!this.countUp3.error) {
+    //   this.countUp3.start(() => {
+
+    //     setTimeout(() => {
+    //       this.hidden = false
+    //     }, 1100);
+    //   });
+    // } else {
+    //   console.error(this.countUp3.error);
+    // }
   }
 
   increment1() {
@@ -59,12 +64,8 @@ export class DonsComponent implements OnInit {
       this.endVal1 += value;
       this.countUp1.update(this.endVal1);
       this.countUp1.start();
-      this.show = true
-
       this.updateCountUp3();
-      setTimeout(() => {
-        this.hidden = true
-      }, 1500);
+
 
     }
   }
@@ -75,10 +76,6 @@ export class DonsComponent implements OnInit {
       this.endVal2 += value;
       this.countUp2.update(this.endVal2);
       this.countUp2.start();
-      this.show = true
-      setTimeout(() => {
-        this.hidden = true
-      }, 1500);
       this.updateCountUp3();
 
     }
@@ -102,7 +99,10 @@ export class DonsComponent implements OnInit {
     this.countUp3.start();
 
   }
-
+  baraka() {
+    this.show = true
+    console.log("test", this.show);
+  }
   celebrate() {
     confetti({
       particleCount: 400,
