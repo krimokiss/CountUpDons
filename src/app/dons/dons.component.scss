@@ -324,6 +324,7 @@
   }
 
   .scroll-text-container {
+    margin-bottom: 1rem;
     width: 100%;
     .scroll-text {
       display: flex;
@@ -344,6 +345,7 @@
     }
   }
   .scroll-text-container-back {
+    margin-top: 1rem;
     width: fit-content;
     .scroll-text-back {
       display: flex;
@@ -369,7 +371,7 @@
       transform: translateX(100%);
     } /* Commence le défilement à gauche de la zone de texte */
     100% {
-      transform: translateX(-130%);
+      transform: translateX(-110%);
     } /* Déplace le texte hors de la zone de texte vers la gauche */
   }
   @keyframes scroll-back {
@@ -377,7 +379,7 @@
       transform: translateX(-100%);
     } /* Commence le défilement à gauche de la zone de texte */
     100% {
-      transform: translateX(130%);
+      transform: translateX(110%);
     } /* Déplace le texte hors de la zone de texte vers la gauche */
   }
   @keyframes top-to-btm {
