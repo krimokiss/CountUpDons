@@ -224,6 +224,7 @@
       font-size: 3rem;
       text-align: center;
       animation: glow 2500ms linear infinite 4000ms;
+      font-family: "Comfortaa", cursive;
     }
   }
   .total {
@@ -245,11 +246,15 @@
   .addition {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 50%;
+    width: 55%;
     color: white;
     font-weight: bold;
-
+    padding: 0 10px;
+    .carte-bleue,
+    .flous {
+      width: 15%;
+      margin: 0 10px;
+    }
     // margin-bottom: 10px;
     // flex-wrap: wrap;
   }
@@ -266,14 +271,14 @@
     animation: reveal 3000ms ease forwards 200ms,
       glow 2500ms linear infinite 4000ms;
     text-align: center;
-    font-family: "EB Garamond", serif;
+    font-family: "Comfortaa", cursive;
   }
 
   #increment-value1,
   #increment-value2 {
-    color: rgb(3, 76, 3);
+    color: rgb(71, 226, 224);
     font-weight: normal;
-    font-family: "EB Garamond", serif;
+    font-family: "Comfortaa", cursive;
     font-size: 1.2rem;
   }
   #increment-btn {
@@ -288,7 +293,7 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
-    font-family: "EB Garamond", serif;
+    font-family: "Comfortaa", cursive;
     font-size: 3rem;
     text-transform: uppercase;
     color: rgb(14, 124, 12);
@@ -300,8 +305,8 @@
     align-items: center;
   }
   #thanks2 {
-    font-family: "EB Garamond", serif;
-    font-size: 6rem;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    font-size: 5rem;
     text-transform: uppercase;
     color: rgb(183, 159, 25);
     // top: 70%;
@@ -321,6 +326,7 @@
   }
 
   .scroll-text-container {
+    margin-bottom: 1rem;
     width: 100%;
     .scroll-text {
       display: flex;
@@ -328,9 +334,9 @@
       justify-content: space-evenly;
       border-radius: 5px;
       text-align: center;
-      font-size: 2rem;
-      line-height: 2.5rem;
-      font-family: "EB Garamond", serif;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-family: "Comfortaa", cursive;
       background-color: #ffffff27;
       backdrop-filter: blur(2px);
       animation: scroll 60s linear infinite; /* Définit l'animation de défilement */
@@ -341,6 +347,7 @@
     }
   }
   .scroll-text-container-back {
+    margin-top: 1rem;
     width: fit-content;
     .scroll-text-back {
       display: flex;
@@ -348,8 +355,8 @@
       justify-content: space-evenly;
       border-radius: 5px;
       text-align: center;
-      font-size: 2.5rem;
-      line-height: 3rem;
+      font-size: 2rem;
+      line-height: 2.5rem;
       font-family: "Noto Kufi Arabic", sans-serif;
       background-color: #ffffff27;
       backdrop-filter: blur(2px);
@@ -366,7 +373,7 @@
       transform: translateX(100%);
     } /* Commence le défilement à gauche de la zone de texte */
     100% {
-      transform: translateX(-130%);
+      transform: translateX(-110%);
     } /* Déplace le texte hors de la zone de texte vers la gauche */
   }
   @keyframes scroll-back {
@@ -374,7 +381,7 @@
       transform: translateX(-100%);
     } /* Commence le défilement à gauche de la zone de texte */
     100% {
-      transform: translateX(130%);
+      transform: translateX(110%);
     } /* Déplace le texte hors de la zone de texte vers la gauche */
   }
   @keyframes top-to-btm {
