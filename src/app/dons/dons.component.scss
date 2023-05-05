@@ -224,6 +224,8 @@
       font-size: 3rem;
       text-align: center;
       animation: glow 2500ms linear infinite 4000ms;
+      filter: drop-shadow(3px 6px 5px rgb(1, 19, 19));
+      font-family: "Comfortaa", cursive;
     }
   }
   .total {
