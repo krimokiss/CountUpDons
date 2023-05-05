@@ -423,11 +423,19 @@
   width: 50vw;
   transition: all 3s linear;
 }
-.text-orange {
+.text-green {
   display: flex;
   justify-content: center;
   align-items: center;
   color: green;
+  width: 50vw;
+  transition: all 3s linear;
+}
+.text-white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(239, 247, 239);
   width: 50vw;
   transition: all 3s linear;
 }
