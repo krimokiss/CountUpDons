@@ -227,7 +227,7 @@
     }
   }
   .total {
-    padding: 40px 0;
+    // padding: 40px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -292,7 +292,7 @@
 
   #thanks {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     font-family: "Comfortaa", cursive;
@@ -302,9 +302,6 @@
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
       0 0 55px #0fa, 0 0 70px #0fa, 0 0 11px #0fa, 0 0 50px #0fa;
     // background-color: purple;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   #thanks2 {
     font-family: "Noto Kufi Arabic", sans-serif;
@@ -313,19 +310,16 @@
     color: rgb(183, 159, 25);
     // top: 70%;
     // left: 50%;
-    transform: translateY(50%);
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
       0 0 42px rgb(255, 204, 0), 0 0 55px rgb(195, 255, 0),
       0 0 70px rgb(238, 255, 0), 0 0 11px rgb(157, 255, 0),
       0 0 50px rgb(187, 255, 0);
-    animation: glow 2500ms linear infinite 4000ms,
-      top-to-btm 15s backwards infinite;
+    animation: glow 2500ms linear infinite 4000ms;
     /* Définit l'animation de défilement */
 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
 
   .scroll-text-container {
@@ -387,18 +381,6 @@
       transform: translateX(110%);
     } /* Déplace le texte hors de la zone de texte vers la gauche */
   }
-  @keyframes top-to-btm {
-    0% {
-      transform: translateY(100%);
-    } /* Commence le défilement à gauche de la zone de texte */
-    50% {
-      transform: translateY(50%);
-    }
-    100% {
-      transform: translateY(100%);
-    }
-    /* Déplace le texte hors de la zone de texte vers la gauche */
-  }
 
   @keyframes reveal {
     80% {
@@ -414,4 +396,38 @@
       text-shadow: 0 0 5px #fff;
     }
   }
+}
+
+.text-sky {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: skyblue;
+  width: 50vw;
+  transition: all 3s linear;
+}
+
+.text-gold {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gold;
+  width: 50vw;
+  transition: all 3s linear;
+}
+.text-orange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: orange;
+  width: 50vw;
+  transition: all 3s linear;
+}
+.text-orange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  width: 50vw;
+  transition: all 3s linear;
 }

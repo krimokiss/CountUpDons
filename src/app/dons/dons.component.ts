@@ -20,6 +20,7 @@ export class DonsComponent implements OnInit {
   show: boolean = false;
   hidden: boolean = true
 
+
   ngOnInit(): void {
     this.countUp1 = new CountUp('targetId1', 0, { duration: this.duration, onCompleteCallback: this.celebrate, suffix: ' €', smartEasingThreshold: 1000 });
     this.countUp2 = new CountUp('targetId2', 0, { duration: this.duration, onCompleteCallback: this.celebrate, smartEasingThreshold: 1000, suffix: ' €' });

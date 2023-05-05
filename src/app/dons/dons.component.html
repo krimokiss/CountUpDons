@@ -7,7 +7,8 @@
     </div>
     <div class="liquide">
       <h1 class="sous-titre">
-        Dons en Espèces : <span id="targetId2">{{ endVal2 }}</span>
+        Dons en Espèces :
+        <span id="targetId2">{{ endVal2 }}</span>
       </h1>
     </div>
   </div>
@@ -27,7 +28,17 @@
   </div>
   <div class="total">
     <h1 class="titre">
-      Total des Dons : <span id="targetId3">{{ endVal3 }}</span>
+      Total :
+      <span
+        [ngClass]="{
+          'text-sky': endVal3 >= 1000 && endVal3 < 5000,
+          'text-gold': endVal3 >= 5000 && endVal3 < 10000,
+          'text-orange': endVal3 >= 10000 && endVal3 < 15000,
+          'text-green': endVal3 >= 15000 && endVal3 < 20000
+        }"
+        id="targetId3"
+        >{{ endVal3 }}</span
+      >
     </h1>
   </div>
 
