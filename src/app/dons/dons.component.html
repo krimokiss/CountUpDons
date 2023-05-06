@@ -7,17 +7,12 @@
     </div>
     <div class="liquide">
       <h1 class="sous-titre">
-        Dons en Espèces : <span id="targetId2">{{ endVal2 }}</span>
+        Dons en Espèces :
+        <span id="targetId2">{{ endVal2 }}</span>
       </h1>
     </div>
   </div>
-
-  <div class="total">
-    <h1 class="titre">
-      Total des Dons : <span id="targetId3">{{ endVal3 }}</span>
-    </h1>
-  </div>
-  <div class="scroll-text-container">
+  <div *ngIf="hidden" class="scroll-text-container">
     <div class="scroll-text">
       <p class="hadith1">
         D'après Othmane (qu'Allah l'agrée), le Prophète (que la prière d'Allah
@@ -31,7 +26,24 @@
       </p>
     </div>
   </div>
-  <div class="scroll-text-container-back">
+  <div class="total">
+    <h1 class="titre">
+      Total :
+      <span
+        [ngClass]="{
+          'text-sky': endVal3 >= 1000 && endVal3 < 5000,
+          'text-gold': endVal3 >= 5000 && endVal3 < 10000,
+          'text-orange': endVal3 >= 10000 && endVal3 < 15000,
+          'text-green': endVal3 >= 15000 && endVal3 < 20000,
+          'text-white': endVal3 >= 20000 && endVal3 < 25000
+        }"
+        id="targetId3"
+        >{{ endVal3 }}</span
+      >
+    </h1>
+  </div>
+
+  <div *ngIf="hidden" class="scroll-text-container-back">
     <div class="scroll-text-back">
       <p class="hadith2">
         عن معاذ بن جبل رضي الله عنه قال رسول الله صلى الله عليه و سلم : الصدقة
