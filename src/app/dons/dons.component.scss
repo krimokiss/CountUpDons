@@ -8,81 +8,83 @@
 //     padding: 0%;
 //     margin: 0%;
 //   }
-//   .container{
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     height: 100vh;
-//     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-//     background-color: rgb(4, 77, 4);
-//   }
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(4, 77, 4);
+  }
 
-// #targetId1, #targetId2, #targetId3 {
-//     font-size: 3em;
-//     font-weight: bold;
-//     text-align: center;
-//   }
+#targetId1, #targetId2, #targetId3 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+  }
 
-//   input[type="number"] {
-//     padding: 5px;
-//     font-size: 1em;
-//     margin: 5px;
-//   }
+  input[type="number"] {
+    padding: 5px;
+    font-size: 1em;
+    margin: 5px;
+  }
 
-//   button {
-//     padding: 5px;
-//     background-color: #007bff;
-//     color: #fff;
-//     border: none;
-//     border-radius: 5px;
-//     cursor: pointer;
-//   }
-//   .cb{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     font-size: 2rem;
-//   }
-//   .dons{
-//     display: flex;
-//     justify-content: space-around;
-//     color: #eff1f3;
-//     animation: glow 2500ms linear infinite 4000ms;
-//   }
+  button {
+    padding: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .cb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  .dons{
+    display: flex;
+    justify-content: space-around;
+    color: #eff1f3;
+    animation: glow 2500ms linear infinite 4000ms;
+  }
 
-//   .addition{
-//     display: flex;
-//     justify-content: space-evenly;
-//     margin-bottom: 10px;
+  .addition{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
 
-//   }
-//   .euros{
-//     font-size: 3rem;
-//   }
-//   .titre, #targetId3{
+  }
+  .euros{
+    font-size: 3rem;
+  }
+  .titre, #targetId3{
 
-//     font-size: 8rem;
-//     color: #007bff;
-//     text-shadow:
-//     0 0 7px #fff,
-//     0 0 10px #fff,
-//     0 0 21px #fff,
-//     0 0 42px #0fa,
-//     0 0 82px #0fa,
-//     0 0 92px #0fa,
-//     0 0 102px #0fa,
-//     0 0 151px #0fa;
-//   }
+    font-size: 8rem;
+    color: #007bff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+  }
 
-//   #targetId3{
-//     animation: glow 2500ms linear infinite 4000ms;
-//   }
+  #targetId3{
+    animation: glow 2500ms linear infinite 4000ms;
+  }
 
-//   @keyframes glow {
-//     40% {
-//       text-shadow: 0 0 15px #fff;
-//     }
-//   }
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 15px #fff;
+    }
+  }
 
 // body{
 //     background-image: url("https://static.vecteezy.com/ti/vecteur-libre/p1/5741719-modele-de-fond-islamique-avec-mihrab-podium-et-croissant-sur-fond-vert-emeraude-illustrationle-islamique-pour-les-vacances-musulmanes-vectoriel.jpg");
@@ -263,24 +265,37 @@
   .addition {
     display: flex;
     align-items: center;
-    width: 55%;
+    justify-content: space-evenly;
+    width: 50%;
     color: white;
     font-weight: bold;
-    padding: 0 10px;
-    .carte-bleue,
-    .flous {
-      width: 15%;
-      margin: 0 10px;
-    }
+
     // margin-bottom: 10px;
     // flex-wrap: wrap;
   }
 
+
+  .titre,
+  #targetId3 {
+    display: flex;
+    width: fit-content;
+    flex-wrap: nowrap;
+    text-shadow: 2px 1px 2px blue;
+    font-size: 5rem;
+    color: #022346;
+    filter: drop-shadow(5px 2px 4px rgb(47, 245, 179));
+    animation: reveal 3000ms ease forwards 200ms,
+      glow 2500ms linear infinite 4000ms;
+    text-align: center;
+    font-family: "EB Garamond", serif;
+  }
+
+
   #increment-value1,
   #increment-value2 {
-    color: rgb(71, 226, 224);
+    color: rgb(3, 76, 3);
     font-weight: normal;
-    font-family: "Comfortaa", cursive;
+    font-family: "EB Garamond", serif;
     font-size: 1.2rem;
   }
   #increment-btn {
@@ -295,7 +310,7 @@
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    font-family: "Comfortaa", cursive;
+    font-family: "EB Garamond", serif;
     font-size: 3rem;
     text-transform: uppercase;
     color: rgb(14, 124, 12);
@@ -304,8 +319,8 @@
     // background-color: purple;
   }
   #thanks2 {
-    font-family: "Noto Kufi Arabic", sans-serif;
-    font-size: 5rem;
+    font-family: "EB Garamond", serif;
+    font-size: 6rem;
     text-transform: uppercase;
     color: rgb(183, 159, 25);
     // top: 70%;
@@ -323,7 +338,6 @@
   }
 
   .scroll-text-container {
-    margin-bottom: 1rem;
     width: 100%;
     .scroll-text {
       display: flex;
@@ -331,9 +345,9 @@
       justify-content: space-evenly;
       border-radius: 5px;
       text-align: center;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-family: "Comfortaa", cursive;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      font-family: "EB Garamond", serif;
       background-color: #ffffff27;
       backdrop-filter: blur(2px);
       animation: scroll 60s linear infinite; /* Définit l'animation de défilement */
@@ -344,7 +358,6 @@
     }
   }
   .scroll-text-container-back {
-    margin-top: 1rem;
     width: fit-content;
     .scroll-text-back {
       display: flex;
@@ -352,8 +365,8 @@
       justify-content: space-evenly;
       border-radius: 5px;
       text-align: center;
-      font-size: 2rem;
-      line-height: 2.5rem;
+      font-size: 2.5rem;
+      line-height: 3rem;
       font-family: "Noto Kufi Arabic", sans-serif;
       background-color: #ffffff27;
       backdrop-filter: blur(2px);
@@ -370,7 +383,7 @@
       transform: translateX(100%);
     } /* Commence le défilement à gauche de la zone de texte */
     100% {
-      transform: translateX(-110%);
+      transform: translateX(-130%);
     } /* Déplace le texte hors de la zone de texte vers la gauche */
   }
   @keyframes scroll-back {
@@ -378,7 +391,7 @@
       transform: translateX(-100%);
     } /* Commence le défilement à gauche de la zone de texte */
     100% {
-      transform: translateX(110%);
+      transform: translateX(130%);
     } /* Déplace le texte hors de la zone de texte vers la gauche */
   }
 
